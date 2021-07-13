@@ -1,0 +1,474 @@
+{
+   "name": "Wadsworth",
+   "id_num": 9543768,
+   "recruit_date": "28/11/2021",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.5382218225131074,
+   "sleep_hours": 10
+},
+{
+   "name": "Kirk",
+   "id_num": 8102817,
+   "recruit_date": "1/8/2020",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.8967460940590213,
+   "sleep_hours": 5
+},
+{
+   "name": "Harvie",
+   "id_num": 8277638,
+   "recruit_date": "15/3/2020",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.060313650806934294,
+   "sleep_hours": 1
+},
+{
+   "name": "Reggy",
+   "id_num": 9160552,
+   "recruit_date": "27/8/2021",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.44956465568264403,
+   "sleep_hours": 5
+},
+{
+   "name": "Noble",
+   "id_num": 8658898,
+   "recruit_date": "20/11/2021",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.8984975897808034,
+   "sleep_hours": 1
+},
+{
+   "name": "Marius",
+   "id_num": 9985080,
+   "recruit_date": "2/3/2018",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.16450576326794264,
+   "sleep_hours": 5
+},
+{
+   "name": "Amery",
+   "id_num": 9071180,
+   "recruit_date": "21/11/2018",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.4657457874239801,
+   "sleep_hours": 1
+},
+{
+   "name": "Lew",
+   "id_num": 8911920,
+   "recruit_date": "10/8/2021",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.9669827685602139,
+   "sleep_hours": 7
+},
+{
+   "name": "Allyn",
+   "id_num": 8258571,
+   "recruit_date": "2/8/2022",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.4321056030535281,
+   "sleep_hours": 3
+},
+{
+   "name": "Kelley",
+   "id_num": 8024093,
+   "recruit_date": "26/8/2019",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.39194759067694507,
+   "sleep_hours": 5
+},
+{
+   "name": "Woodie",
+   "id_num": 8082335,
+   "recruit_date": "3/11/2018",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.031943040010741,
+   "sleep_hours": 8
+},
+{
+   "name": "Giff",
+   "id_num": 9953013,
+   "recruit_date": "21/11/2022",
+   "status": "HOME",
+   "jobs": [
+      "driver"
+   ],
+   "hardwork_score": 0.7429719046407843,
+   "sleep_hours": 2
+},
+{
+   "name": "Rodrigo",
+   "id_num": 9941009,
+   "recruit_date": "11/3/2020",
+   "status": "SICK",
+   "jobs": [
+      "commander",
+      "nagmash"
+   ],
+   "hardwork_score": 0.3716911258557386,
+   "sleep_hours": 1
+},
+{
+   "name": "Jean-Pierre",
+   "id_num": 9538824,
+   "recruit_date": "27/11/2021",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.49597616269092304,
+   "sleep_hours": 1
+},
+{
+   "name": "Gustav",
+   "id_num": 9062751,
+   "recruit_date": "17/8/2018",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.20037422081288736,
+   "sleep_hours": 4
+},
+{
+   "name": "Yehudi",
+   "id_num": 9949116,
+   "recruit_date": "7/8/2021",
+   "status": "HOME",
+   "jobs": [],
+   "hardwork_score": 0.7629903171255217,
+   "sleep_hours": 7
+},
+{
+   "name": "Orlando",
+   "id_num": 8022323,
+   "recruit_date": "1/8/2018",
+   "status": "BASE",
+   "jobs": [
+      "commander"
+   ],
+   "hardwork_score": 0.17231696459750756,
+   "sleep_hours": 3
+},
+{
+   "name": "Upton",
+   "id_num": 8466842,
+   "recruit_date": "11/11/2022",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.11638130365578381,
+   "sleep_hours": 4
+},
+{
+   "name": "Major",
+   "id_num": 9494556,
+   "recruit_date": "7/8/2022",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.3044758871457075,
+   "sleep_hours": 6
+},
+{
+   "name": "Monty",
+   "id_num": 9036173,
+   "recruit_date": "16/3/2022",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.8986714122142959,
+   "sleep_hours": 4
+},
+{
+   "name": "Willie",
+   "id_num": 9504912,
+   "recruit_date": "24/11/2020",
+   "status": "SICK",
+   "jobs": [],
+   "hardwork_score": 0.6196804701504295,
+   "sleep_hours": 2
+},
+{
+   "name": "Bobbie",
+   "id_num": 9590338,
+   "recruit_date": "6/3/2018",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.46377404000781774,
+   "sleep_hours": 5
+},
+{
+   "name": "Julio",
+   "id_num": 9590784,
+   "recruit_date": "16/3/2021",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.975859903511504,
+   "sleep_hours": 8
+},
+{
+   "name": "Rabi",
+   "id_num": 8141676,
+   "recruit_date": "24/8/2020",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.716234353156183,
+   "sleep_hours": 8
+},
+{
+   "name": "Hale",
+   "id_num": 9999577,
+   "recruit_date": "9/8/2018",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.7548378495550672,
+   "sleep_hours": 6
+},
+{
+   "name": "Clifford",
+   "id_num": 9061236,
+   "recruit_date": "13/8/2021",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.6483647679230667,
+   "sleep_hours": 6
+},
+{
+   "name": "Ward",
+   "id_num": 8985107,
+   "recruit_date": "5/8/2019",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.7319159732600276,
+   "sleep_hours": 3
+},
+{
+   "name": "Angelico",
+   "id_num": 9461629,
+   "recruit_date": "22/8/2019",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.5354267824543334,
+   "sleep_hours": 11
+},
+{
+   "name": "Tome",
+   "id_num": 8541610,
+   "recruit_date": "25/8/2021",
+   "status": "BASE",
+   "jobs": [
+      "nagmash"
+   ],
+   "hardwork_score": 0.7324643076176626,
+   "sleep_hours": 1
+},
+{
+   "name": "Trenton",
+   "id_num": 9520905,
+   "recruit_date": "2/3/2022",
+   "status": "BASE",
+   "jobs": [
+      "driver",
+      "nagmash"
+   ],
+   "hardwork_score": 0.08172084947679448,
+   "sleep_hours": 4
+},
+{
+   "name": "Pavel",
+   "id_num": 9220857,
+   "recruit_date": "24/3/2021",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.8324335183819391,
+   "sleep_hours": 5
+},
+{
+   "name": "Leland",
+   "id_num": 8565462,
+   "recruit_date": "22/11/2019",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.33835119992630613,
+   "sleep_hours": 4
+},
+{
+   "name": "Kane",
+   "id_num": 8439838,
+   "recruit_date": "5/3/2019",
+   "status": "SICK",
+   "jobs": [
+      "commander",
+      "officer"
+   ],
+   "hardwork_score": 0.9797066810168517,
+   "sleep_hours": 6
+},
+{
+   "name": "Elden",
+   "id_num": 9036750,
+   "recruit_date": "28/8/2020",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.9666458635516146,
+   "sleep_hours": 6
+},
+{
+   "name": "Parnell",
+   "id_num": 9767668,
+   "recruit_date": "2/8/2020",
+   "status": "SICK",
+   "jobs": [],
+   "hardwork_score": 0.2853138567148533,
+   "sleep_hours": 2
+},
+{
+   "name": "Gian",
+   "id_num": 9716434,
+   "recruit_date": "10/3/2022",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.4052008592178077,
+   "sleep_hours": 4
+},
+{
+   "name": "Forrest",
+   "id_num": 8651473,
+   "recruit_date": "27/8/2021",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.16043043509227528,
+   "sleep_hours": 3
+},
+{
+   "name": "Jackson",
+   "id_num": 9821159,
+   "recruit_date": "16/8/2021",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.04823281121638012,
+   "sleep_hours": 4
+},
+{
+   "name": "Silvanus",
+   "id_num": 8950977,
+   "recruit_date": "18/8/2020",
+   "status": "BASE",
+   "jobs": [
+      "driver"
+   ],
+   "hardwork_score": 0.5742579576559317,
+   "sleep_hours": 3
+},
+{
+   "name": "Milton",
+   "id_num": 9184175,
+   "recruit_date": "11/11/2020",
+   "status": "HOME",
+   "jobs": [],
+   "hardwork_score": 0.09145430411590894,
+   "sleep_hours": 5
+},
+{
+   "name": "Brewster",
+   "id_num": 8509404,
+   "recruit_date": "18/3/2019",
+   "status": "BASE",
+   "jobs": [
+      "commander",
+      "driver",
+      "nagmash"
+   ],
+   "hardwork_score": 0.2895234947480275,
+   "sleep_hours": 6
+},
+{
+   "name": "Nate",
+   "id_num": 8284797,
+   "recruit_date": "26/11/2020",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.8740552223026271,
+   "sleep_hours": 7
+},
+{
+   "name": "Bjorne",
+   "id_num": 9770496,
+   "recruit_date": "18/8/2019",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.29972663811930045,
+   "sleep_hours": 6
+},
+{
+   "name": "Rene",
+   "id_num": 9219080,
+   "recruit_date": "12/8/2021",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.698685257569758,
+   "sleep_hours": 5
+},
+{
+   "name": "Dario",
+   "id_num": 8793639,
+   "recruit_date": "14/11/2021",
+   "status": "BASE",
+   "jobs": [
+      "officer"
+   ],
+   "hardwork_score": 0.23295230408794632,
+   "sleep_hours": 4
+},
+{
+   "name": "Marilu",
+   "id_num": 8888955,
+   "recruit_date": "9/3/2019",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.28216936399075954,
+   "sleep_hours": 2
+},
+{
+   "name": "Bartie",
+   "id_num": 8695300,
+   "recruit_date": "1/3/2021",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.5385629996593368,
+   "sleep_hours": 4
+},
+{
+   "name": "Grover",
+   "id_num": 9347725,
+   "recruit_date": "21/3/2022",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.2828301588024583,
+   "sleep_hours": 2
+},
+{
+   "name": "Sylvester",
+   "id_num": 9823048,
+   "recruit_date": "5/8/2019",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.9523658399506886,
+   "sleep_hours": 0
+},
+{
+   "name": "Jay",
+   "id_num": 9824063,
+   "recruit_date": "12/8/2019",
+   "status": "BASE",
+   "jobs": [],
+   "hardwork_score": 0.5401939436519575,
+   "sleep_hours": 7
+}
+
