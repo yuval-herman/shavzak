@@ -1,6 +1,6 @@
 import random
 from pprint import pprint
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 import numpy
 import shavzak
@@ -11,15 +11,18 @@ from deap import base
 from deap import creator
 from deap import tools
 
-from multiprocessing import Pool
+#from multiprocessing import Pool
 
 gen=300
-n=200
-cxpb=0.5
+n=100
+mu=int(n/2)
+lambda_=n
+cxpb=0.4
 mutpb=0.2
 indpb=0.2
+p, m = shavzak.parseFile('sadac.json')
 
-creator.create("FitnessMax", base.Fitness, weights=(-10.0, -1.0, 10.0)) #numOfPeople, hardWorkScore, jobScore
+creator.create("FitnessMax", base.Fitness, weights=(-1.0, -1.0, 1.0)) #numOfPeople, hardWorkScore, jobScore
 creator.create("Individual", list, fitness=creator.FitnessMax)
 
 toolbox = base.Toolbox()
@@ -27,13 +30,13 @@ toolbox = base.Toolbox()
 toolbox.register("individual", make_instructions, creator.Individual)
 toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 toolbox.register("original", make_shavzak, list)
-#pprint(toolbox.original())
-toolbox.register("map", Pool().map)
-toolbox.register("evaluate", evalFit, orig=toolbox.original)
+#pprint(execute_instructions(toolbox.individual()))
+#exit()
+#toolbox.register("map", Pool().map)
+toolbox.register("evaluate", evalFit, p, m)
 toolbox.register("mate", tools.cxOnePoint)
-o=toolbox.original()
-toolbox.register("mutate", mutate, indpb=indpb, r=[len(o), 0, len(o[0][1])])
-toolbox.register("select", tools.selTournament, tournsize=3)
+toolbox.register("mutate", mutate, indpb=indpb, r=[len(m), len(p)])
+toolbox.register("select", tools.selNSGA2)
 
 def main():
 	
@@ -45,7 +48,7 @@ def main():
 	stats.register("min", numpy.min, axis=0)
 	stats.register("max", numpy.max, axis=0)
 
-	pop, log = algorithms.eaSimple(pop, toolbox, cxpb=cxpb, mutpb=mutpb, ngen=gen,
+	pop, log = algorithms.eaMuPlusLambda(pop, toolbox, mu=mu, lambda_=lambda_, cxpb=cxpb, mutpb=mutpb, ngen=gen,
 								   stats=stats, halloffame=hof, verbose=True)
 	
 	return pop, log, hof
@@ -53,15 +56,15 @@ def main():
 if __name__ == "__main__":
 	_, log, hof = main()
 	
-	best=execute_instructions(hof[0], toolbox.original())
+	best=execute_instructions(hof[0])
 	pprint(best)
 	print("are there duplicates?: {}".format(has_duplicates(best)))
 	print("does it have everyone?: {}".format(has_everyone(best)))
-	
-	plt.plot(log.select('max'), label='max')
+	pprint(missions_complete(best))	
+	'''plt.plot(log.select('max'), label='max')
 	plt.plot(log.select('min'), label='min')
 	plt.plot(log.select('avg'), label='avg')
 	plt.plot(log.select('std'), label='std')
 	plt.legend()
 	plt.xlabel('gen')
-	plt.show()
+	plt.show()'''

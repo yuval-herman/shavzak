@@ -2,6 +2,12 @@ import random
 import shavzak
 from pprint import pprint
 
+def missions_complete(ind):
+	for m, p in ind:
+		if m.name!='spare' and m.num_of_people!=len(p):
+			print('{}:{} -> {}'.format(m.name, m.num_of_people, len(p)))
+			return False
+	return True
 
 def has_duplicates(ind):
 	ids=[]
@@ -10,7 +16,7 @@ def has_duplicates(ind):
 	if len(ids) != len(set(ids)):
 		return True
 	return False
-	
+
 def has_everyone(ind, everyone=None):
 	if everyone == None:
 		peoples, missions = shavzak.parseFile('sadac.json')
@@ -35,28 +41,24 @@ def make_shavzak(t):
 def make_instructions(ind):
 	moves=ind()
 	peoples, missions = shavzak.parseFile('sadac.json')
-	for i in peoples: #iterate over missions
-		m=random.randint(1,len(missions))
-		sm=0
-		p=random.randint(1,len(peoples))
-		moves.append([m, sm,p])
+	for pi in range(len(peoples)): #iterate over people
+		pi=random.randint(0, len(peoples))
+		mi=random.randint(0, len(missions))
+		moves.append([mi,pi])
 	return moves
 
-def execute_instructions(ind, orig):
-	#instructions are (mission, mission to take from, person to take)
+def execute_instructions(ind):
+	#instructions are (mission, person to take)
+	p, m = shavzak.parseFile('sadac.json')
+	slist=[[mi,[]] for mi in m]
 	for inst in ind:
-		if  (0<=inst[0]<len(orig) and #mission exists
-				0<=inst[1]<len(orig) and #second mission exists
-				0<=inst[2]<len(orig[inst[1]][1])): #person exists
-				
-			m = orig[inst[0]][1] #mission people
-			mtk = orig[inst[1]][1] #mission people to take
-			m.append(mtk.pop(inst[2]))
-			
-	return orig
+		if  (0<=inst[0]<len(m) and #mission exists
+		     0<=inst[1]<len(p)): #person exists
+			slist[inst[0]][1].append(p[inst[1]])
+	return slist
 
-def evalFit(ind, orig):
-	ind=execute_instructions(ind, orig())
+def evalFit(ind, pip, mis):
+	ind=execute_instructions(ind)
 	pnum=0
 	hardWorkScore=0
 	hasJobScore=0
@@ -86,8 +88,8 @@ def evalFit(ind, orig):
 def mutate(ind, indpb, r):
 	for inst in ind: #go through instructions
 		if random.random()<=indpb:
-			i=random.choice((0,2))
-			inst[i]=random.choice(range(r[i]))
+			i=random.choice((0, 1))
+			inst[i]=random.randrange(r[i])
 	return ind,
 
 origi=make_shavzak(list)
