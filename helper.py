@@ -38,41 +38,44 @@ def make_shavzak(t):
 	ind.append((shavzak.Mission('spare', 0, [], [], 0.01),[]))
 	return ind
 
-def make_instructions(ind):
+def make_instructions(ind, peoples, missions):
 	moves=ind()
-	peoples, missions = shavzak.parseFile('sadac.json')
+	#peoples, missions = shavzak.parseFile('sadac.json')
 	for pi in range(len(peoples)): #iterate over people
 		pi=random.randint(0, len(peoples))
 		mi=random.randint(0, len(missions))
 		moves.append([mi,pi])
 	return moves
 
-def execute_instructions(ind):
+def execute_instructions(ind, p, m):
 	#instructions are (mission, person to take)
-	p, m = shavzak.parseFile('sadac.json')
-	slist=[[mi,[]] for mi in m]
+	#p, m = shavzak.parseFile('sadac.json')
+	slist=[[mi,set()] for mi in m]
+	usedPeople=set()
 	for inst in ind:
-		if  (0<=inst[0]<len(m) and #mission exists
-		     0<=inst[1]<len(p)): #person exists
-			slist[inst[0]][1].append(p[inst[1]])
+		try:
+			if p[inst[1]] in usedPeople: continue
+			usedPeople.add(p[inst[1]])
+			slist[inst[0]][1].add(p[inst[1]])
+		except IndexError: pass
 	return slist
 
 def evalFit(ind, pip, mis):
-	ind=execute_instructions(ind)
-	pnum=0
-	hardWorkScore=0
-	hasJobScore=0
-	for i in range(len(ind)):
+	ind=execute_instructions(ind, pip, mis)
+	pnum=0 #check the number of people in each job
+	hardWorkScore=0 #check people get jobs with correct hardness
+	hasJobScore=0 #check each mission has all requierd jobs
+	
+	for i in range(len(ind)): #go over each mission
 		mission=ind[i][0]
 		people=ind[i][1]
 		#evaluate the hardness meshing
 		for p in people:
-			hardWorkScore+=-abs(mission.hardness-p.hardwork_score)
+			hardWorkScore-=abs(mission.hardness-p.hardwork_score)
 		
 		#evaluate the amount of people in each mission
 		if mission.name=="spare":
-			pnum += 1
-			continue #don't care about the amount of people in the spare
+			continue #don't care about the amount or jobs of people in the spare
 		pnum += abs(mission.num_of_people-len(people)) #the farther away the number is the bigger the fitness
 		
 		#evaluate if correct jobs are in each mission
