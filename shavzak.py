@@ -14,7 +14,8 @@ def parseFile(path):
 		people.append(Person.from_dict(person))
 	for mission in jData['missions']:
 		missions.append(Mission.from_dict(mission))
-	
+
+	missions.append(Mission('spare', 0, [], [], 0.01))
 	return people, missions
 
 
